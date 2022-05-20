@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,svelte,html,ts,css}"],
   theme: {
     extend: {
+      fontSize: {
+        "null": "0px",
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },
@@ -15,6 +18,7 @@ module.exports = {
     }
   },
   plugins: [
+    require('@tailwindcss/typography'),
     require("daisyui"),
   ],
   daisyui: {
